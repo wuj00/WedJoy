@@ -1,14 +1,14 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 var ObjectId = Schema.Types.ObjectId
-// var bcrypt = require('bcrypt-nodejs')
+var bcrypt = require('bcrypt-nodejs')
 
-var user_schema = Schema({
+var user_schema = new Schema({
     name: String,
     lastname: String,
     email: {type: String, unique: true, required: true},
     password: {type: String, required: true},
-    inspo: [{type: ObjectId, ref: "Inspo"}],
+    inspos: [{type: ObjectId, ref: "Inspo"}],
     admin: Boolean
 })
 
