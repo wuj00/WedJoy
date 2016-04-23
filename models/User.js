@@ -8,10 +8,10 @@ var user_schema = new Schema({
     lastname: String,
     email: {type: String, unique: true, required: true},
     password: {type: String, required: true},
-    inspos: [{type: ObjectId, ref: "Inspo"}],
+    inspo: [{type: Schema.ObjectId, ref: "Inspo"}],//each inspo id
+    inspo_for: [{type: Schema.ObjectId, ref: "Inspo"}],//who received the inspo
     admin: Boolean
 })
-
 
 user_schema.methods.generateHash = function(password){
     return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null)

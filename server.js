@@ -17,9 +17,9 @@ var cardRoutes = require('./routes/cards.js')
 //==================
 // configuration ===============
 //==================
-mongoose.connect('mongodb://localhost/wedjoy', function(err){
-    if(err) return console.log("Error connecting")
-    console.log("Connected to MongoDB! Boom!")
+mongoose.connect('mongodb://127.0.0.1:27017/wedjoy', function(err){
+    if(err) return console.log(err)
+    console.log("Connected to MongoDB! WEDJOY!")
 })
 
 //middleware
@@ -60,4 +60,5 @@ app.use('/card', cardRoutes)
 
 app.listen(3000, function(){
     console.log("Server running on localhost:3000!");
+    // console.log("Server running on localhost:3000!");
 })

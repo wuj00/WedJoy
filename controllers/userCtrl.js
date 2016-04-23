@@ -14,7 +14,7 @@ module.exports = {
         //     if(err) return console.log(err)
         //     res.json({success: true, message: "User created", user: user})
         // })
-//---------OR------------------
+//---------WITH BCRPYT------------------
         var new_user = new User(req.body)
         new_user.password = new_user.generateHash(req.body.password)
         new_user.save(function(err, user){

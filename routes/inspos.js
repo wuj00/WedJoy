@@ -4,12 +4,12 @@ var inspo_ctrl = require('../controllers/inspoCtrl.js')
 
 inspo_router.route('/')
     .get(inspo_ctrl.index)
-    .post(inspo_ctrl.create)
+    .post(inspo_ctrl.post_inspo)
 
 inspo_router.route('/:id')
-    .get(inspo_ctrl.show)
-    .patch(inspo_ctrl.update)
-    .delete(inspo_ctrl.delete)
+    .get(inspo_ctrl.show_inspo)
+    .patch(inspo_ctrl.update_inspo)
+    .delete(inspo_ctrl.delete_inspo)
 
 
 module.exports = inspo_router
