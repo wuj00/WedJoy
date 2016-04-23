@@ -12,7 +12,7 @@ var inspoRoutes = require('./routes/inspos.js')
 var cardRoutes = require('./routes/cards.js')
 // var config = require('./config'); //get our config file
 
-console.log(process.env.SECRET);
+// console.log(process.env.SECRET);
 
 //==================
 // configuration ===============
@@ -54,7 +54,7 @@ app.get('/', function(req, res){
 
 
 app.use('/users', userRoutes)
-// app.use('/inspoboard', inspoRoutes)
+app.use('/inspoboard', inspoRoutes)
 
 
 app.listen(3000, function(){

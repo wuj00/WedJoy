@@ -8,13 +8,31 @@ module.exports = {
         })
     },
     //show specific inspo
-    show: function(req, res){
+    show_inspo: function(req, res){
         Inspo.findById(req.params.id).exec(function(err, inspo){
             if(err) throw err
             res.json({success: true, inspo: inspo})
         })
     },
-    destroy: function(req, res){
+    post_inspo: function(req, res){
+        var new_inspo = new Inspo(req.body)
+        new_inspo.save(function(err, category){
+            if(err) throw err
+            res.json({success: true, message: "Inspirational board successfully uploaded", inspo: inspo})
+        })
+    },
+    update_inspo: function(req, res){
+        Inspo.findOne({_id: req.params.id}).exec(function(err, inspo){
+            if(err) throw err
+            inspo.name = req.body.name
+            inspo.cards = req.body.cards
+            inspo.save(function(err, saved_inspo){
+                if(err) throw err
+                res.json({success: true, message: "successfully edited inspirational board", inspo: saved_inspo})
+            })
+        })
+    },
+    destroy_inspo: function(req, res){
         Inspo.findOne({_id: req.params.id}).exec(function(err, inspo){
             if(err) throw err
             inspo.remove({_id: req.params.id}, function(err){

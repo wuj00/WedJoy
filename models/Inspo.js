@@ -4,7 +4,18 @@ var ObjectId = Schema.Types.ObjectId
 
 var inspo_schema = Schema({
     _creator: {type: ObjectId, ref: "User"},
-    cards: [{type: ObjectId, ref: "Card"}],
+    name: String,
+    cards: [{type: ObjectId, ref: "Card"}]
+})
+
+//creating a new inspoboard
+inspo_schema.post('save', function(inspo){
+    User.findById(inspo._creator).exec(function(err, user){
+        if(user.inspo.indexOf(inspo._id) === -1){
+            user.inspo.push(inspo._id)
+            user.save()
+        }
+    })
 })
 
 var Inspo = mongoose.model('Inspo', inspo_schema)

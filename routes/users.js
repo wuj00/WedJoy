@@ -1,16 +1,16 @@
 var express = require('express')
-var userRouter = express.Router()
-var userCtrl = require('../controllers/userCtrl.js')
+var user_router = express.Router()
+var user_ctrl = require('../controllers/userCtrl.js')
 
-userRouter.post('/authenticate', userCtrl.authenticate)
-userRouter.route('/')
-    .get(userCtrl.index)
-    .post(userCtrl.create)
+user_router.post('/authenticate', user_ctrl.authenticate)
+user_router.route('/')
+    .get(user_ctrl.index)
+    .post(user_ctrl.create)
 
-// userRouter.use(userCtrl.protect)
-userRouter.route('/:id')
-    .get(userCtrl.show)
-    .delete(userCtrl.destroy)
-    .patch(userCtrl.update)
+// user_router.use(user_ctrl.protect)
+user_router.route('/:id')
+    .get(user_ctrl.show)
+    .patch(user_ctrl.update)
+    .delete(user_ctrl.destroy)
 
-module.exports = userRouter
+module.exports = user_router

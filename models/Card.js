@@ -5,7 +5,7 @@ var User = require('./User.js')
 var Inspo = require('./Inspo.js')
 
 var card_schema = Schema({
-    vendorname: {type: String, required: true},
+    vendor: {type: String, required: true},
     location: String,
     website: String,
     price: String,
