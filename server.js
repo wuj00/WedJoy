@@ -55,6 +55,7 @@ app.get('/', function(req, res){
 
 app.use('/users', userRoutes)
 app.use('/inspoboard', inspoRoutes)
+app.use('/card', cardRoutes)
 
 
 app.listen(3000, function(){

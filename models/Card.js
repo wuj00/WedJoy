@@ -1,31 +1,50 @@
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 var ObjectId = Schema.Types.ObjectId
-var User = require('./User.js')
-var Inspo = require('./Inspo.js')
+// var User = require('./User.js')
+// var Inspo = require('./Inspo.js')
 
-var card_schema = Schema({
+var card_schema = new Schema({
     vendor: {type: String, required: true},
     location: String,
     website: String,
     price: String,
-    inspo: {type: ObjectId, ref: "Inspo"},
+    inspo: {type: ObjectId, ref: "Inspo"}
 })
-
-// // when deleting a product
-// product_schema.post('remove', function(product){
-//   User.findById(product._creator).exec(function(err, user){
-//     if (user){
-//       user.products.splice(user.products.indexOf(product._id), 1)
-//       user.save()
-//     }
-//   })
-//   Category.findById(product.category).exec(function(err, category){
-//     category.products.splice(category.products.indexOf(product._id), 1)
-//     category.save()
-//   })
-// })
-
-
+//
+// // // when creating a new product
+// // card_schema.post('save', function(card){
+// //   Inspo.findById(card._creator).exec(function(err, inspo){
+// //     if (inspo.cards.indexOf(inspo._id) === -1){
+// //       inspo.cards.push(inspo._id)
+// //       inspo.save()
+// //     }
+// //   })
+// //   Inspo.findById(card.Inspo).exec(function(err, inspo){
+// //     if (inspo.cards) {
+// //       if (inspo.cards.indexOf(card._id) === -1){
+// //         inspo.cards.push(card._id)
+// //         inspo.save()
+// //       }
+// //     }
+// //   })
+// // })
+// //
+// //
+// // // when deleting a card
+// // card_schema.post('remove', function(card){
+// //   Inspo.findById(card._creator).exec(function(err, user){
+// //     if (inspo){
+// //       inspo.cards.splice(inspo.cards.indexOf(card._id), 1)
+// //       inspo.save()
+// //     }
+// //   })
+// //   Inspo.findById(card.inspo).exec(function(err, inspo){
+// //     inspo.cards.splice(inspo.cards.indexOf(card._id), 1)
+// //     inspo.save()
+// //   })
+// // })
+//
+//
 var Card = mongoose.model('Card', card_schema)
 module.exports = Card
