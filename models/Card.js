@@ -9,12 +9,12 @@ var card_schema = new Schema({
     location: String,
     website: String,
     price: String,
-    inspo: {type: ObjectId, ref: "Inspo"}
+    _inspo: {type: ObjectId, ref: "Inspo"}
 })
 
 // when creating a new product
 card_schema.post('save', function(card){
-  Inspo.findById(card.inspo).exec(function(err, inspo){
+  Inspo.findById(card._inspo).exec(function(err, inspo){
     if (inspo.cards.indexOf(inspo._id) === -1){
       inspo.cards.push(inspo._id)
       inspo.save()
@@ -33,7 +33,7 @@ card_schema.post('save', function(card){
 
 // when deleting a card
 card_schema.post('remove', function(card){
-  Inspo.findById(card.inspo).exec(function(err, inspo){
+  Inspo.findById(card._inspo).exec(function(err, inspo){
     if (inspo){
       inspo.cards.splice(inspo.cards.indexOf(card._id), 1)
       inspo.save()
