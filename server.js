@@ -4,7 +4,7 @@ var mongoose = require('mongoose')
 var morgan = require('morgan')
 var path = require('path')
 var bodyParser = require('body-parser')
-var jwt = require('jsonwebtoken') //used cdto create, sign, and verify tokens
+var jwt = require('jsonwebtoken') //used to create, sign, and verify tokens
 var dotenv = require('dotenv').load({silent:true})
 
 var userRoutes = require('./routes/users.js')

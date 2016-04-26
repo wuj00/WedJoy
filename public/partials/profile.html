@@ -12,7 +12,6 @@
 
     </head>
     <body>
-        <div class="container" style="margin-left:300px; margin-right:300px;">
 
         <ul class="navbar" style="position:relative;">
             <li><a href="../index.html">Home</a></li>
@@ -21,31 +20,62 @@
             <li><a href="users.html">Users</a></li>
         </ul>
 
+        <!-- <div class="container" style="margin-left:230px; margin-right:230px;"> -->
+        <div class="container" style="width:900px; margin:0 auto;">
 
-        <ul class="tab" style="position:relative;">
-            <li><a href="#" class="tablinks active" onclick="openTab(event, 'Account')">Account Info</a></li>
-            <li><a href="#" class="tablinks" onclick="openTab(event, 'Inspo')">Inspirational Boards</a></li>
-        </ul>
+            <ul class="tab" style="position:relative;">
+                <li><a href="#" class="tablinks active" onclick="openTab(event, 'Account')">Account</a></li>
+                <li><a href="#" class="tablinks" onclick="openTab(event, 'Inspo')">Inspiration Boards</a></li>
+            </ul>
 
-        <div id="London" class="tabcontent">
-            <h3>London</h3>
-            <p>London is the capital city of England.</p>
-        </div>
+            <div id="Account" class="tabcontent">
+                <div class="side-info" style="float:left; margin-left:50px; margin-right:50px">
+                    <h3>My Account</h3>
+                    <br>
+                    <ul style="list-style-type:none;">
+                        <li>Account Information</li>
+                        <br>
+                        <li>Change Password</li>
+                    </ul>
+                </div>
 
-        <div id="Paris" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
-        </div>
 
-        <div id="Tokyo" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
-        </div>
+                <div class="profile-p" style="padding-left:60px; float:right; border-left:2px solid #c7c7c7; width:500px; margin-top:43px; margin-right:20px;">
+                    <h3>Account Information</h3>
+
+                    <form class="account-form" action="index.html" method="post">
+                        <p>First name*</p><br>
+                        <input type="text" name="firstname" placeholder="caps sensitive"><br>
+                        <p>Last name*</p><br>
+                        <input type="text" name="lastname" placeholder="caps sensitive"><br>
+                        <p>Email*</p><br>
+                        <input type="text" name="email" placeholder="caps sensitive"><br>
+                        <p>Phone number:</p><br>
+                        <input type="text" name="phone">
+                    </form>
+                    <!-- <p>Lorem ipsum dolor sit amet, vestibulum dolor porttitor, reiciendis accumsan venenatis, fusce cras vestibulum, sodales in lacinia nulla mi. Mauris ipsum, condimentum vehicula nullam tristique eget aenean libero, turpis elit, fringilla est sed luctus mi. Duis nec amet purus per laoreet et, nullam scelerisque phasellus nullam. Rhoncus laoreet, commodo molestie rutrum rhoncus phasellus luctus, lacus a dolor arcu ut euismod, aliquam ligula tincidunt, integer condimentum aptent luctus consequat non. Urna leo nec praesent interdum, elit sed proin sed id pellentesque, et volutpat, nonummy adipiscing magna elit tortor gravida quam. Nullam ligula in, amet maecenas eget pellentesque ultricies fringilla velit, etiam eros, consectetuer augue dolore, risus pulvinar sit id mus nulla. Pretium dignissim convallis lacinia tincidunt tellus lectus, metus mi, tellus in est in, rutrum purus. Sed tristique quam, sodales orci, et tortor vel mauris, diam odio ultricies.</p> -->
+                    <h3>Change Password</h3>
+
+                    <form class="account-form" action="index.html" method="post">
+                        <p>Confirm your current password*</p><br>
+                        <input type="text" name="current"><br>
+                        <p>New password*</p><br>
+                        <input type="text" name="new"><br>
+                        <p>Confirm new password*</p><br>
+                        <input type="text" name="confirm"><br>
+                    </form>
+
+                    <button type="button" name="button">SAVE CHANGES</button>
+
+                </div>
             </div>
-        <h1>THIS IS THE PROFILE PAGE</h1>
 
+            <div id="Inspo" class="tabcontent">
+                <h3>Inspiration Boards</h3>
+                <p>Ut vehicula lorem interdum, donec cras lectus tincidunt, cras aenean torquent vehicula tristique, quisque gravida vitae sed, sed a cras magna ullamcorper. Lorem nulla aliquam elit luctus placerat nec, at justo adipiscing, condimentum et libero elementum porttitor convallis, sapien id nulla sem porttitor, vitae non amet elit luctus nonummy. Ante sit ipsum amet, posuere suscipit molestie porttitor accumsan duis scelerisque, at tortor enim sit porttitor aliquet veritatis. Quis rutrum ipsum fringilla, vitae in curae quis, porro ornare dolor nostra in erat. Amet mi vestibulum nunc, quisque netus tempor et. Fringilla eget, wisi fringilla eget purus, maecenas sagittis convallis sagittis facilisis ut. Praesent fusce sed rhoncus quis accumsan, integer hic amet aliquam, felis vel integer justo. At nibh commodo neque aenean, duis nec aenean pellentesque ipsum, est sit, nostra volutpat sit justo lorem amet. Nec libero, fringilla reprehenderit, neque ut.</p>
+            </div>
 
-    </div>
+        </div>
 
 
 
