@@ -13,17 +13,17 @@ var inspo_schema = new Schema({
 
 //creating a new inspoboard
 inspo_schema.post('save', function(inspo){
-    User.findById(inspo._creator).exec(function(err, user){
-        if(user.inspo_for.indexOf(inspo._id) === -1){
-            user.inspo_for.push(inspo._id)
-            user.save()
+    User.findById(inspo._creator).exec(function(err, creator){
+        if(creator.inspo_for.indexOf(inspo._id) === -1){
+            creator.inspo_for.push(inspo._id)
+            creator.save()
         }
     })
-    User.findById(inspo._inspoTo).exec(function(err, user){
+    User.findById(inspo._inspoTo).exec(function(err, receiver){
         if(err) console.log(err)
-        if(user.inspo.indexOf(inspo._id) === -1){
-            user.inspo.push(inspo._id)
-            user.save()
+        if(receiver.inspo.indexOf(inspo._id) === -1){
+            receiver.inspo.push(inspo._id)
+            receiver.save()
         }
     })
 })

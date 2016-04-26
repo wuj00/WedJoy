@@ -50,7 +50,9 @@ var Inspo = require('../models/Inspo.js')
 
 module.exports = {
     index: function(req, res){
-        Inspo.find({}).exec(function(err, inspos){
+        Inspo.find({})
+        .populate({path: 'cards', select: '-_id vendor'})
+        .exec(function(err, inspos){
             if(err) throw err
             res.json({success: true, message: "All inspirational boards", inspos: inspos})
         })
