@@ -7,7 +7,7 @@ user_router.route('/')
     .get(user_ctrl.index)
     .post(user_ctrl.create)
 
-// user_router.use(user_ctrl.protect)
+ user_router.use(user_ctrl.protect)
 user_router.route('/:id')
     .get(user_ctrl.show)
     .patch(user_ctrl.update)

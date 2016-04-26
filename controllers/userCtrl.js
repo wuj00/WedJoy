@@ -19,7 +19,7 @@ module.exports = {
         new_user.password = new_user.generateHash(req.body.password)
         new_user.save(function(err, user){
             if(err) throw err
-            var token = jwt.sign(user.toObject(), process.env.secret.toString(), {
+            var token = jwt.sign(user.toObject(), process.env.SECRET.toString(), {
                 expiresIn:50000
             })
             res.json({message: "user created, here's a token", user: user, token: token})
@@ -51,7 +51,7 @@ module.exports = {
             if(err) throw err
             User.remove({_id: req.params.id}, function(err){
                 if(err) throw err
-                res.json({success: true, message: user + "deleted!"})
+                res.json({success: true, message: "deleted!", deletedPerson: user})
             })
         })
     },
@@ -60,7 +60,9 @@ module.exports = {
             if (err) throw err
             if (!user) return res.json({success: false, message: "No user found with that email"})
             console.log(!user.validPassword(req.body.password))
-            if (user && !user.validPassword(req.body.password)) return res.json({success: false, message: "Password is wrong"})
+            if (user && !user.validPassword(req.body.password))
+                return res.json({success: false, message: "Password is wrong"})
+                console.log(process.env)
             var token = jwt.sign(user.toObject(), process.env.SECRET.toString(), {
                 expriresIn:50000
             })
@@ -68,4 +70,22 @@ module.exports = {
             res.json({success: true, message: "Correct password. Here's your token!", token: token, user: user})
         })
     },
+
+    protect: function(req, res, next){
+
+   var token = req.body.token || req.query.token || req.headers['x-access-token']
+   console.log(1, token)
+   if (token) {
+     jwt.verify(token, process.env.SECRET, function(err, decoded){
+       if (err) return res.json({success: false, message: "wrong token infomation"})
+       req.decoded = decoded
+       next()
+     })
+   } else {
+     return res.status(403).json({
+       success: false,
+       message: "no token was provided"
+     })
+   }
+ }
 }//close
