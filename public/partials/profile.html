@@ -20,14 +20,94 @@
             <li><a href="users.html">Users</a></li>
         </ul>
 
-        <!-- <div class="container" style="margin-left:230px; margin-right:230px;"> -->
         <div class="container" style="width:900px; margin:0 auto;">
 
             <ul class="tab" style="position:relative;">
-                <li><a href="#" class="tablinks active" onclick="openTab(event, 'Account')">Account</a></li>
-                <li><a href="#" class="tablinks" onclick="openTab(event, 'Inspo')">Inspiration Boards</a></li>
+                <li><a href="#" class="tablinks" onclick="openTab(event, 'Account')">Account</a></li>
+                <li><a href="#" class="tablinks active" onclick="openTab(event, 'Inspo')">Inspiration Boards</a></li>
             </ul>
 
+<!-- INSPIRATIONAL BOARD --------------------------------->
+            <div id="Inspo" class="tabcontent">
+                <div class="container" style="width:860px; height:700px; display:inline-flex; flex-wrap:wrap; padding:20px; clear:both;">
+                    <div class="card-base" style="margin-left:10px; margin-right:10px;">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+
+<!-- ACCOUT INFO --------------------------------------->
             <div id="Account" class="tabcontent">
                 <div class="side-info" style="float:left; margin-left:50px; margin-right:50px">
                     <h3>My Account</h3>
@@ -39,40 +119,31 @@
                     </ul>
                 </div>
 
-
                 <div class="profile-p" style="padding-left:60px; float:right; border-left:2px solid #c7c7c7; width:500px; margin-top:43px; margin-right:20px;">
                     <h3>Account Information</h3>
 
-                    <form class="account-form" action="index.html" method="post">
+                    <form class="account-form" action="profile.html" method="post">
                         <p>First name*</p><br>
-                        <input type="text" name="firstname" placeholder="caps sensitive"><br>
+                        <input type="text" name="firstname" required placeholder="caps sensitive"><br>
                         <p>Last name*</p><br>
-                        <input type="text" name="lastname" placeholder="caps sensitive"><br>
+                        <input type="text" name="lastname" required placeholder="caps sensitive"><br>
                         <p>Email*</p><br>
-                        <input type="text" name="email" placeholder="caps sensitive"><br>
-                        <p>Phone number:</p><br>
+                        <input type="text" name="email" required placeholder="caps sensitive"><br>
+                        <p>Phone number</p><br>
                         <input type="text" name="phone">
                     </form>
-                    <!-- <p>Lorem ipsum dolor sit amet, vestibulum dolor porttitor, reiciendis accumsan venenatis, fusce cras vestibulum, sodales in lacinia nulla mi. Mauris ipsum, condimentum vehicula nullam tristique eget aenean libero, turpis elit, fringilla est sed luctus mi. Duis nec amet purus per laoreet et, nullam scelerisque phasellus nullam. Rhoncus laoreet, commodo molestie rutrum rhoncus phasellus luctus, lacus a dolor arcu ut euismod, aliquam ligula tincidunt, integer condimentum aptent luctus consequat non. Urna leo nec praesent interdum, elit sed proin sed id pellentesque, et volutpat, nonummy adipiscing magna elit tortor gravida quam. Nullam ligula in, amet maecenas eget pellentesque ultricies fringilla velit, etiam eros, consectetuer augue dolore, risus pulvinar sit id mus nulla. Pretium dignissim convallis lacinia tincidunt tellus lectus, metus mi, tellus in est in, rutrum purus. Sed tristique quam, sodales orci, et tortor vel mauris, diam odio ultricies.</p> -->
+
                     <h3>Change Password</h3>
-
-                    <form class="account-form" action="index.html" method="post">
+                    <form class="account-form" action="profile.html" method="post">
                         <p>Confirm your current password*</p><br>
-                        <input type="text" name="current"><br>
+                        <input type="text" name="current" required><br>
                         <p>New password*</p><br>
-                        <input type="text" name="new"><br>
+                        <input type="text" name="new" required><br>
                         <p>Confirm new password*</p><br>
-                        <input type="text" name="confirm"><br>
+                        <input type="text" name="confirm" required><br>
+                        <input type="submit" value="SAVE CHANGES" style=""></input>
                     </form>
-
-                    <button type="button" name="button">SAVE CHANGES</button>
-
                 </div>
-            </div>
-
-            <div id="Inspo" class="tabcontent">
-                <h3>Inspiration Boards</h3>
-                <p>Ut vehicula lorem interdum, donec cras lectus tincidunt, cras aenean torquent vehicula tristique, quisque gravida vitae sed, sed a cras magna ullamcorper. Lorem nulla aliquam elit luctus placerat nec, at justo adipiscing, condimentum et libero elementum porttitor convallis, sapien id nulla sem porttitor, vitae non amet elit luctus nonummy. Ante sit ipsum amet, posuere suscipit molestie porttitor accumsan duis scelerisque, at tortor enim sit porttitor aliquet veritatis. Quis rutrum ipsum fringilla, vitae in curae quis, porro ornare dolor nostra in erat. Amet mi vestibulum nunc, quisque netus tempor et. Fringilla eget, wisi fringilla eget purus, maecenas sagittis convallis sagittis facilisis ut. Praesent fusce sed rhoncus quis accumsan, integer hic amet aliquam, felis vel integer justo. At nibh commodo neque aenean, duis nec aenean pellentesque ipsum, est sit, nostra volutpat sit justo lorem amet. Nec libero, fringilla reprehenderit, neque ut.</p>
             </div>
 
         </div>
