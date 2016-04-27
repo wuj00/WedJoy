@@ -75,7 +75,7 @@
         }
 
         // Set css on origin
-        origin.css({position: 'absolute', 'z-index': 1000})
+        origin.css({'position': 'absolute', 'z-index': 1000})
         .data('width', originalWidth)
         .data('height', originalHeight);
 
@@ -263,7 +263,7 @@
 };
 
 $(document).ready(function(){
-  $('.materialboxed').materialbox();
+    $('.materialboxed').materialbox();
 });
 
 }( jQuery ));

@@ -183,3 +183,18 @@ li.active a, li.active a:hover {
     background-color: #5db6b4;
     overflow: hidden;
 }
+div#materialbox-overlay {
+    z-index: -1;
+    overflow-y: hidden;
+}
+div.card-content {
+    padding: 10px 20px 10px 20px !important;
+    line-height: 18px;
+}
+.card .card-content .card-title {
+    line-height: 20px !important;
+    font-size: 18px;
+}
+.card .card-content p {
+    font-size: 14px;
+}

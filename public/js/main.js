@@ -14,8 +14,3 @@ $(document).ready(function() {
         e.preventDefault();
     });
 });
-
-// $(document).ready(function(){
-//     $('.materialboxed').materialbox();
-//
-//   });
