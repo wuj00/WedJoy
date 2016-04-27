@@ -11,153 +11,144 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
         <!-- Javascript -->
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../js/app.js"></script> -->
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="../js/app.js"></script>
+
 
     </head>
-    <body>
+    <body style="overflow:hidden;">
 
-        <ul class="navbar" style="position:relative;">
+        <ul class="navbar">
             <li><a href="../index.html">Home</a></li>
-            <li><a class="active">Profile</a></li>
+            <li><a class="active" href="#">Profile</a></li>
             <li><a href="inspo.html">Inspirational Boards</a></li>
             <li><a href="users.html">Users</a></li>
         </ul>
 
-<!-- TABLINKS --------------------------------------->
-        <div class="container" style="width:900px; margin:0 auto;">
+        <!-- <img style="width:100%;" src="https://apis.xogrp.com/media-api/images/70ba55bf-1dda-48ac-b9ae-0dfa9125b7a8" alt="" /> -->
 
-            <ul class="tab" style="position:relative;">
-                <li><a href="#" class="tablinks" onclick="openTab(event, 'Account')">Account</a></li>
-                <li><a href="#" class="tablinks active" onclick="openTab(event, 'Inspo')">Inspiration Boards</a></li>
+<!-- TABLINKS --------------------------------------->
+        <div class="container" style="width:900px; height:860px; margin:0 auto; position:relative;">
+            <ul class="tabs" style="position:relative;">
+                <li><a href="#account">Account</a></li>
+                <li class="active"><a href="#inspo">Inspiration Board</a></li>
             </ul>
 
-<!-- INSPIRATIONAL BOARD --------------------------------->
-            <div id="Inspo" class="tabcontent">
-                <div class="container" style="width:860px; height:700px; display:inline-flex; flex-wrap:wrap; padding:20px; clear:both;">
-                    <div class="card-base" style="margin-left:10px; margin-right:10px;">
-                        <div class="card-big-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="margin-bottom:0px;">
-                            <img src="" alt="" />
-                        </div>
-                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div class="card-base">
-                        <div class="card-big-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="margin-bottom:0px;">
-                            <img src="" alt="" />
-                        </div>
-                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <div class="card-base">
-                        <div class="card-big-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="margin-bottom:0px;">
-                            <img src="" alt="" />
-                        </div>
-                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="card-base">
-                        <div class="card-big-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="">
-                            <img src="" alt="" />
-                        </div>
-                        <div class="card-img" style="margin-bottom:0px;">
-                            <img src="" alt="" />
-                        </div>
-                        <p style="position:relative; text-align:center; margin:0 auto; top:12px;">Lorem ipsum dolor sit amet</p>
-                    </div>
-                </div>
-            </div>
-
 <!-- ACCOUNT INFO --------------------------------------->
-            <div id="Account" class="tabcontent">
-                <div class="side-info" style="float:left; margin-left:50px; margin-right:50px">
-                    <h3>My Account</h3>
-                    <br>
-                    <ul style="list-style-type:none;">
-                        <li>Account Information</li>
+            <div class="tab-content">
+                <div id="account" class="tab" style="height:800px; background-color:white;">
+                    <div style="float:left; margin-left:60px; margin-right:50px;">
+                        <h3>My Account</h3>
                         <br>
-                        <li>Change Password</li>
-                    </ul>
+                        <ul style="list-style-type:none;">
+                            <li>Account Information</li>
+                            <br>
+                            <li>Change Password</li>
+                        </ul>
+                    </div>
+
+                    <div class="profile-p">
+
+                        <form class="account-form" action="profile.html" method="post" style="float:right; border-left:2px solid #c7c7c7; width:420px; margin-top:64px; margin-right:60px; padding-left:70px;">
+                            <h3>Account Information</h3>
+                            <p>First name*</p><br>
+                            <input type="text" name="firstname" placeholder="caps sensitive" required><br>
+                            <p>Last name*</p><br>
+                            <input type="text" name="lastname" placeholder="caps sensitive" required><br>
+                            <p>Email*</p><br>
+                            <input type="text" name="email" placeholder="caps sensitive" required><br>
+                            <p>Phone number</p><br>
+                            <input type="text" name="phone">
+
+                            <h3>Change Password</h3>
+                            <p>Confirm your current password*</p><br>
+                            <input type="text" name="current" placeholder="caps sensitive" required><br>
+                            <p>New password*</p><br>
+                            <input type="text" name="new" placeholder="caps sensitive" required><br>
+                            <p>Confirm new password*</p><br>
+                            <input type="text" name="confirm" placeholder="caps sensitive" required><br>
+                            <input type="submit" value="SAVE CHANGES" style=""></input>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="profile-p" style="padding-left:60px; float:right; border-left:2px solid #c7c7c7; width:500px; margin-top:43px; margin-right:20px;">
-                    <h3>Account Information</h3>
+<!-- INSPIRATIONAL BOARD --------------------------------->
+                <div id="inspo" class="tab active" style="height:650px; background-color:white; display:inline-flex; flex-wrap:wrap; padding:34.5px;">
 
-                    <form class="account-form" action="profile.html" method="post">
-                        <p>First name*</p><br>
-                        <input type="text" name="firstname" required placeholder="caps sensitive"><br>
-                        <p>Last name*</p><br>
-                        <input type="text" name="lastname" required placeholder="caps sensitive"><br>
-                        <p>Email*</p><br>
-                        <input type="text" name="email" required placeholder="caps sensitive"><br>
-                        <p>Phone number</p><br>
-                        <input type="text" name="phone">
-                    </form>
-
-                    <h3>Change Password</h3>
-                    <form class="account-form" action="profile.html" method="post">
-                        <p>Confirm your current password*</p><br>
-                        <input type="text" name="current" required><br>
-                        <p>New password*</p><br>
-                        <input type="text" name="new" required><br>
-                        <p>Confirm new password*</p><br>
-                        <input type="text" name="confirm" required><br>
-                        <input type="submit" value="SAVE CHANGES" style=""></input>
-                    </form>
+                    <div class="card-base" style="margin-left:10px; margin-right:10px;">
+                        <div class="card-big-img" style="width:202px; height:202px;">
+                            <img src="../img/Maggie Sottero.jpg" alt="" style="max-width:100%;"/>
+                        </div>
+                        <div class="card-img" style="width:47.5px; height:47.5px;">
+                            <img src="../img/elisecakes.jpg" alt="" style="max-width:100%;"/>
+                        </div>
+                        <div class="card-img" style="width:47.5px; height:47.5px;">
+                            <img src="../img/LittleBridgeDesign.jpg" alt="" style="max-height:100%;"/>
+                        </div>
+                        <div class="card-img" style="width:47.5px; height:47.5px;">
+                            <img src="../img/signage.jpg" alt="" style="max-width:100%;"/>
+                        </div>
+                        <div class="card-img" style="width:47.5px; height:47.5px; margin-bottom:0px;">
+                            <img src="../img/Black-and-gold-Art-Deco-wedding-inspiration-11.jpg" alt="" style="max-width:100%;"/>
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:15px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:15px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:15px;">Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="card-base">
+                        <div class="card-big-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="">
+                            <img src="" alt="" />
+                        </div>
+                        <div class="card-img" style="margin-bottom:0px;">
+                            <img src="" alt="" />
+                        </div>
+                        <p style="position:relative; text-align:center; margin:0 auto; top:15px;">Lorem ipsum dolor sit amet</p>
+                    </div>
                 </div>
             </div>
-
         </div>
-
-
-
-
-
-
     </body>
 </html>

@@ -1,11 +1,13 @@
 @font-face {
-    font-family: Quicksand-Book;
-    src: url(../fonts/Quicksand Book.otf) format('opentype');
+    font-family: Quicksand;
+    src: url(./fonts/Quicksand Book.otf) format('opentype');
 }
 
 body {
-    font-family: Roboto;
+    font-family: Quicksand;
     margin: 0 auto;
+    background-color: snow;
+    /*background-color: #f1f1f1;*/
 }
 
 h1 {
@@ -19,7 +21,7 @@ h1 {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
 }
@@ -40,8 +42,8 @@ h1 {
     background-color: #111;
 }
 
-.navbar.active {
-    background-color: #c7c7c7;
+.navbar li a.active {
+    background-color: #111;
 }
 /*--------------------------------------------------*/
 
@@ -66,7 +68,7 @@ ul.tabs {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     background-color: #f1f1f1;
 }
 
@@ -92,12 +94,12 @@ ul.tabs a:hover {
 }
 
 /* Create an active/current tablink class */
-ul.tabs a:focus, .active {
-    background-color: #ddd;
+ul.tabs a:focus .active{
+    background-color: white;
 }
 
 li.active a, li.active a:hover {
-    background:#ddd;
+    background:white;
     color:#4c4c4c;
 }
 
@@ -114,10 +116,6 @@ li.active a, li.active a:hover {
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
-}
-
-div#Inspo.tabcontent {
-    /*display: inline-flex !important;*/
 }
 
 @-webkit-keyframes fadeEffect {
@@ -158,28 +156,30 @@ div#Inspo.tabcontent {
 }
 /*INSPO CARD---------------------------------------*/
 .card-base {
-    border:1px solid grey;
+    /*border:1px solid grey;*/
     width:255px;
     height:250px;
     /*margin:0 auto;*/
     margin-left:10px;
     margin-right:10px;
-    box-shadow: 0 1 1 #c7c7c7;
+    box-shadow: 2px 2px 10px #c7c7c7;
 }
 .card-big-img {
-    border:1px solid grey;
-    width:201px;
-    height:201px;
+    /*border:1px solid grey;*/
+    width:202px;
+    height:202px;
     float:left;
     background-color: #c7c7c7;
+    overflow: hidden;
 }
 .card-img {
-    border:1px solid grey;
-    width:45px;
-    height:45px;
+    /*border:1px solid grey;*/
+    width:47.5px;
+    height:47.5px;
     float:right;
-    margin-left:5px;
-    margin-bottom:5px;
+    margin-left:4px;
+    margin-bottom:4px;
     position:relative;
-    background-color: #5db6b4
+    background-color: #5db6b4;
+    overflow: hidden;
 }
