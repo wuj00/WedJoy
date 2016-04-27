@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Quicksand-Book;
+    src: url(../fonts/Quicksand Book.otf) format('opentype');
+}
+
 body {
     font-family: Roboto;
     margin: 0 auto;
@@ -35,7 +40,7 @@ h1 {
     background-color: #111;
 }
 
-.navbar .active {
+.navbar.active {
     background-color: #c7c7c7;
 }
 /*--------------------------------------------------*/
@@ -45,7 +50,18 @@ h1 {
    PROFILE
 ----------------------------------------------------*/
 /*TAB-----------------------------------------------*/
-ul.tab {
+/* Clearfix */
+/*.container {
+    display: inline-block;
+}*/
+
+ul.tabs:after {
+   display:block;
+   clear:both;
+   content:'';
+}
+
+ul.tabs {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -55,10 +71,12 @@ ul.tab {
 }
 
 /* Float the list items side by side */
-ul.tab li {float: left;}
+ul.tabs li {
+    float: left;
+}
 
 /* Style the links inside the list items */
-ul.tab li a {
+ul.tabs li a {
     display: inline-block;
     color: black;
     text-align: center;
@@ -69,22 +87,35 @@ ul.tab li a {
 }
 
 /* Change background color of links on hover */
-ul.tab li a:hover {
+ul.tabs a:hover {
     background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-ul.tab li a:focus, .active {
-    background-color: #ccc;
+ul.tabs a:focus, .active {
+    background-color: #ddd;
+}
+
+li.active a, li.active a:hover {
+    background:#ddd;
+    color:#4c4c4c;
 }
 
 /* Style the tab content */
-.tabcontent {
+#account {
     display: none;
     padding: 6px 12px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 }
+
+#inspo {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
 div#Inspo.tabcontent {
     /*display: inline-flex !important;*/
 }
@@ -98,6 +129,16 @@ div#Inspo.tabcontent {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+
 /*FORM---------------------------------------------*/
 .account-form input {
     width: 400px;
