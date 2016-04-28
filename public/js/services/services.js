@@ -5,6 +5,8 @@
 		.factory('cardService', cardService)
 
 	userService.$inject = ['$http']
+	inspoService.$inject = ['$http']
+	cardService.$inject = ['$http']
 
 	function userService($http){
 		var apiUrl = '/users/'
@@ -27,6 +29,7 @@
 		}
 		function create(data){
 			return $http.post(apiUrl, data)
+
 		}
 		function update(id, data){
 			return $http.patch(apiUrl + id, data)
@@ -35,6 +38,7 @@
 			return $http.delete(apiUrl + id)
 		}
 		function login(data){
+			console.log(data);
 			return $http.post(apiUrl + 'authenticate', data)
 
 		}

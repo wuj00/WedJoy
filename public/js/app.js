@@ -24,10 +24,15 @@
                     url: '/users',
                     templateUrl: 'partials/users.html'
                 })
-				.state('detail', {
+				.state('profile', {
 					url: '/users/:id',
 					templateUrl: 'partials/profile.html',
 					controller: 'ProfileCtrl as pc'
+				})
+				.state('inspo', {
+					url: '/inspoboard/:id',
+					templateUrl: 'partials/inspo.html',
+					controller: 'InspoCtrl as ic'
 				})
 		})
 })()//everytime something new is made CONSOLE LOG - so that you know where it went wrong.
