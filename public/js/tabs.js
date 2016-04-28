@@ -1,5 +1,3 @@
-
-
 //PROFILE page -- tab-----
 $(document).ready(function() {
     $('.container .tabs a').on('click', function(e)  {
