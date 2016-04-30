@@ -29,6 +29,11 @@
 					templateUrl: 'partials/profile.html',
 					controller: 'ProfileCtrl as pc'
 				})
+				.state('create_inspo', {
+					url: '/inspoboard/',
+					templateUrl: 'partials/create_inspo.html',
+					controller: 'InspoCtrl as ic'
+				})
 				.state('inspo', {
 					url: '/inspoboard/:id',
 					templateUrl: 'partials/inspo.html',

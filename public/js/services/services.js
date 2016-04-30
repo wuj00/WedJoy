@@ -29,7 +29,6 @@
 		}
 		function create(data){
 			return $http.post(apiUrl, data)
-
 		}
 		function update(id, data){
 			return $http.patch(apiUrl + id, data)
