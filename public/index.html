@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="wedjoy">
     <head>
         <meta charset="utf-8">
-        <title>WedJoy | HOME</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 
         <!-- FONTS -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
         <!-- Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/angular-ui-router.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/services/authInterceptor.js"></script>
+        <script src="js/services/authService.js"></script>
+        <script src="js/services/services.js"></script>
+        <script src="js/controllers/globalCtrl.js"></script>
+        <script src="js/controllers/controllers.js"></script>
+        <script src="js/tabs.js"></script>
+        <script src="js/materialbox.js"></script>
+
+
+
 
 
 
     </head>
-    <body>
+    <body ng-controller="GlobalCtrl as gc">
         <ul class="navbar">
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="partials/profile.html">Profile</a></li>
-          <li><a href="partials/inspo.html">Inspirational Boards</a></li>
-          <li><a href="partials/users.html">Users</a></li>
+          <li><a ui-sref="home">Home</a></li>
+          <li><a ui-sref="profile">Profile</a></li>
+          <li><a ui-sref="inspo">Inspiration Boards</a></li>
+          <li><a ui-sref="users">Users</a></li>
+          <li><a ui-sref="signup">SignUP!</a></li>
+          <li><a ui-sref="login">LOGIN!</a></li>
+
+          <li><a ng-click="gc.logout()">logout</a></li>
         </ul>
 
-        <!-- <img style="width:100%;" src="https://apis.xogrp.com/media-api/images/70ba55bf-1dda-48ac-b9ae-0dfa9125b7a8" alt="" /> -->
-
-        <img style="width:100%;" src="https://i.kinja-img.com/gawker-media/image/upload/zkfi173jjx2ngrn03r2m.jpg" alt="" />
-
-        <div style="margin:0 auto; width:85%;">
-            <h1>HELLO WORLD</h1>
-            <a href="./partials/profile.html">PROFILE</a>
-            <a href="./partials/inspo.html">Inspiration Board</a>
-            <a href="./partials/users.html">All users</a>
-            <a href="./partials/signup.html">SignUp</a>
-
-
-            <p>Lorem ipsum dolor sit amet, vestibulum dolor porttitor, reiciendis accumsan venenatis, fusce cras vestibulum, sodales in lacinia nulla mi. Mauris ipsum, condimentum vehicula nullam tristique eget aenean libero, turpis elit, fringilla est sed luctus mi. Duis nec amet purus per laoreet et, nullam scelerisque phasellus nullam. Rhoncus laoreet, commodo molestie rutrum rhoncus phasellus luctus, lacus a dolor arcu ut euismod, aliquam ligula tincidunt, integer condimentum aptent luctus consequat non. Urna leo nec praesent interdum, elit sed proin sed id pellentesque, et volutpat, nonummy adipiscing magna elit tortor gravida quam. Nullam ligula in, amet maecenas eget pellentesque ultricies fringilla velit, etiam eros, consectetuer augue dolore, risus pulvinar sit id mus nulla. Pretium dignissim convallis lacinia tincidunt tellus lectus, metus mi, tellus in est in, rutrum purus. Sed tristique quam, sodales orci, et tortor vel mauris, diam odio ultricies.</p>
-            <p>Ut vehicula lorem interdum, donec cras lectus tincidunt, cras aenean torquent vehicula tristique, quisque gravida vitae sed, sed a cras magna ullamcorper. Lorem nulla aliquam elit luctus placerat nec, at justo adipiscing, condimentum et libero elementum porttitor convallis, sapien id nulla sem porttitor, vitae non amet elit luctus nonummy. Ante sit ipsum amet, posuere suscipit molestie porttitor accumsan duis scelerisque, at tortor enim sit porttitor aliquet veritatis. Quis rutrum ipsum fringilla, vitae in curae quis, porro ornare dolor nostra in erat. Amet mi vestibulum nunc, quisque netus tempor et. Fringilla eget, wisi fringilla eget purus, maecenas sagittis convallis sagittis facilisis ut. Praesent fusce sed rhoncus quis accumsan, integer hic amet aliquam, felis vel integer justo. At nibh commodo neque aenean, duis nec aenean pellentesque ipsum, est sit, nostra volutpat sit justo lorem amet. Nec libero, fringilla reprehenderit, neque ut.</p>
-            <p>Ligula nunc eros, purus malesuada per, vestibulum nulla eu vitae ante, proin tincidunt in, mauris felis integer lectus in posuere. Auctor et nostra facilisis, id massa. Nec sit proin pellentesque, vestibulum ante non quis, quam suspendisse. Nonummy libero luctus elit in mus. Praesent sollicitudin eleifend, augue etiam phasellus, nisl sed orci. Mattis eleifend congue elit, habitasse magna nisl est dolor, sed donec ac nec condimentum, sit ante volutpat vel omnis. Auctor dui id, sodales turpis, potenti mi nisi viverra. Aliquam mauris purus a asperiores odio iaculis, et adipiscing, morbi libero turpis feugiat, quisque ultrices egestas arcu, platea eros et mauris. Sed sit quisque, duis viverra, mattis erat nunc mauris donec, placerat eu cras rhoncus eros, leo luctus pharetra etiam ac adipiscing.</p>
-            <p>Fermentum dictumst sed, porttitor in varius lacinia, ac metus est, vitae tempus eleifend velit tellus magna. Elit consectetuer vitae euismod habitasse porta, eget pellentesque elementum consequat, netus potenti elementum sed amet at. Ac ut enim, massa risus taciti nisl nec, facilisis maecenas pretium. Cursus scelerisque eu nullam. Nunc et mi pretium cras nulla. Quam est fames a diam. Lectus ut elit dui odio justo luctus. Metus posuere in mi, sit pellentesque massa est accumsan lectus. Eget donec, eu nulla fusce, orci pede, eleifend vehicula vivamus orci tortor nascetur. Justo dignissim cras augue anim nibh vitae, viverra egestas, consectetuer risus, ut rutrum morbi ultrices, felis neque nibh nulla. Voluptatem tincidunt volutpat, adipiscing nec blandit cras justo vitae tristique, pulvinar adipiscing molestie mauris sit.</p>
-
-        </div>
-
+    <div ui-view></div>
     </body>
 </html>

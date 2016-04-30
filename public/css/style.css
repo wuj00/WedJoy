@@ -117,6 +117,12 @@ li.active a, li.active a:hover {
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
 }
+#create {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
 
 @-webkit-keyframes fadeEffect {
     from {opacity: 0;}
@@ -183,6 +189,24 @@ li.active a, li.active a:hover {
     background-color: #5db6b4;
     overflow: hidden;
 }
+.card-icon {
+    border:10px solid #c7c7c7;
+    border-radius: 20px;
+    width:200px;
+    height:200px;
+    /*margin:0 auto;*/
+    /*margin-left:10px;
+    margin-right:10px;*/
+}
+div#materialize-lean-overlay-1.lean-overlay {
+    z-index: 0 !important;
+}
+/*.modal {
+    width:800px !important;
+    height: 400px !important;
+    position: relative !important;
+}*/
+
 div#materialbox-overlay {
     z-index: -1;
     overflow-y: hidden;

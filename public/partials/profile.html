@@ -1,44 +1,28 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>WedJoy | PROFILE</title>
+<title>WedJoy | PROFILE</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="../css/style.css">
+<script src="../js/tabs.js"></script>
 
-        <!-- FONTS -->
-        <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-
-        <!-- Javascript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="../js/main.js"></script>
+<body ng="wedjoy" ng-controller="ProfileCtrl as pc" style="overflow:hidden;">
 
 
-    </head>
-    <body style="overflow:hidden;">
-
-        <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a class="active" href="#">Profile</a></li>
-            <li><a href="inspo.html">Inspirational Boards</a></li>
-            <li><a href="users.html">Users</a></li>
-        </ul>
-
-        <!-- <img style="width:100%;" src="https://apis.xogrp.com/media-api/images/70ba55bf-1dda-48ac-b9ae-0dfa9125b7a8" alt="" /> -->
+<!-- <img style="width:100%;" src="https://apis.xogrp.com/media-api/images/70ba55bf-1dda-48ac-b9ae-0dfa9125b7a8" alt="" /> -->
 
 <!-- TABLINKS --------------------------------------->
-        <div class="container" style="width:900px; height:860px; margin:0 auto; position:relative;">
+        <div class="container" style="width:900px; height:780px; margin:0 auto; position:relative;">
             <ul class="tabs" style="position:relative;">
                 <li><a href="#account">Account</a></li>
                 <li class="active"><a href="#inspo">Inspiration Board</a></li>
+                <li><a ui-sref="create_inspo">Create</a></li>
             </ul>
 
 <!-- ACCOUNT INFO --------------------------------------->
             <div class="tab-content">
-                <div id="account" class="tab" style="height:800px; background-color:white;">
+                <div id="account" class="tab" style="height:1000px; background-color:white;">
                     <div style="float:left; margin-left:60px; margin-right:50px;">
-                        <h3>My Account</h3>
+                        <br>
+                        <br>
+                        <br>
+                        <h5>My Account</h5>
                         <br>
                         <ul style="list-style-type:none;">
                             <li>Account Information</li>
@@ -50,7 +34,8 @@
                     <div class="profile-p">
 
                         <form class="account-form" action="profile.html" method="post" style="float:right; border-left:2px solid #c7c7c7; width:420px; margin-top:64px; margin-right:60px; padding-left:70px;">
-                            <h3>Account Information</h3>
+                            <h5>Account Information</h5>
+                            <br>
                             <p>First name*</p><br>
                             <input type="text" name="firstname" placeholder="caps sensitive" required><br>
                             <p>Last name*</p><br>
@@ -59,23 +44,27 @@
                             <input type="text" name="email" placeholder="caps sensitive" required><br>
                             <p>Phone number</p><br>
                             <input type="text" name="phone">
-
-                            <h3>Change Password</h3>
+                            <br>
+                            <br>
+                            <br>
+                            <h5>Change Password</h5>
+                            <br>
                             <p>Confirm your current password*</p><br>
                             <input type="text" name="current" placeholder="caps sensitive" required><br>
                             <p>New password*</p><br>
                             <input type="text" name="new" placeholder="caps sensitive" required><br>
                             <p>Confirm new password*</p><br>
                             <input type="text" name="confirm" placeholder="caps sensitive" required><br>
-                            <input type="submit" value="SAVE CHANGES" style=""></input>
-                        </form>
+                            <button class="btn waves-effect waves-light" type="submit">SAVE CHANGES
+                                <i class="material-icons right">send</i></button>
+                            </form>
                     </div>
                 </div>
 
 <!-- INSPIRATIONAL BOARD --------------------------------->
-                <div id="inspo" class="tab active" style="height:650px; background-color:white; display:inline-flex; flex-wrap:wrap; padding:34.5px;">
+                <div id="inspo" class="tab active" style="height:700px; background-color:white; display:inline-flex; flex-wrap:wrap; padding:34.5px;">
 
-                    <a href="inspo.html" style="text-decoration:none; color: black;">
+                    <a ui-sref="inspo" style="text-decoration:none; color: black;">
                         <div class="card-base" style="margin-left:10px; margin-right:10px;">
                             <div class="card-big-img" style="width:202px; height:202px;">
                                 <img src="../img/Maggie Sottero.jpg" alt="" style="max-width:100%;"/>

@@ -1,51 +1,3 @@
-// var Inspo = require('../models/Inspo.js')
-//
-// module.exports = {
-//
-//     //list all inspos
-//     index: function(req, res){
-//         Inspo.find({}, function(err, inspo){
-//             if(err) return console.log(err)
-//             res.json(inspos)
-//         })
-//     },
-//
-//     //create new inspo
-//     create: function(req, res){
-//         Inspo.create(req.body, function(err, inspo){
-//             if(err) return console.log(err)
-//             res.json({success: true, message: "Inspoboard created!", inspo: inspo})
-//         })
-//     },
-//
-//     //show specific inspo
-//     show: function(req, res){
-//         Inspo.findOne({_id: req.params.id}, function(err, inspo){
-//             if(err) return console.log(err)
-//             res.json(inspo)
-//         })
-//     },
-//     //update a inspo
-//     update: function(req, res){
-//         Inspo.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, inspo){
-//             if(err) return console.log(err)
-//             res.json({success: true, message: "Inspo updated!", inspo: inspo})
-//         })
-//     },
-//
-//     //delete a inspo
-//     delete: function(req, res){
-//         Inspo.findOneAndRemove({_id: req.params.id}, function(err){
-//             if(err) return console.log(err)
-//             res.json({success: true, message: "Inspo deleted!"})
-//         })
-//     }
-// } //last closing
-
-
-
-////---------------------------------------------------------------
-
 var Inspo = require('../models/Inspo.js')
 
 module.exports = {
@@ -94,3 +46,49 @@ module.exports = {
         })
     }
 }
+
+////---------------------------------------------------------------
+
+// var Inspo = require('../models/Inspo.js')
+//
+// module.exports = {
+//
+//     //list all inspos
+//     index: function(req, res){
+//         Inspo.find({}, function(err, inspo){
+//             if(err) return console.log(err)
+//             res.json(inspos)
+//         })
+//     },
+//
+//     //create new inspo
+//     create: function(req, res){
+//         Inspo.create(req.body, function(err, inspo){
+//             if(err) return console.log(err)
+//             res.json({success: true, message: "Inspoboard created!", inspo: inspo})
+//         })
+//     },
+//
+//     //show specific inspo
+//     show: function(req, res){
+//         Inspo.findOne({_id: req.params.id}, function(err, inspo){
+//             if(err) return console.log(err)
+//             res.json(inspo)
+//         })
+//     },
+//     //update a inspo
+//     update: function(req, res){
+//         Inspo.findOneAndUpdate({_id: req.params.id}, req.body, {new: true}, function(err, inspo){
+//             if(err) return console.log(err)
+//             res.json({success: true, message: "Inspo updated!", inspo: inspo})
+//         })
+//     },
+//
+//     //delete a inspo
+//     delete: function(req, res){
+//         Inspo.findOneAndRemove({_id: req.params.id}, function(err){
+//             if(err) return console.log(err)
+//             res.json({success: true, message: "Inspo deleted!"})
+//         })
+//     }
+// } //last closing
